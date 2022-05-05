@@ -168,11 +168,11 @@
     <Content Include="Views\Test\HW1.cshtml" />
     <Content Include="Views\Test\HW2.cshtml" />
     <Content Include="Views\Test\HW3.cshtml" />
+    <Content Include="Views\Water\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Water\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

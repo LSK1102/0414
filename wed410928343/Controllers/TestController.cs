@@ -23,6 +23,7 @@ namespace wed410928343.Controllers
         }
         public ActionResult HW3()
         {
+            ViewData["A"] = 200;
             return View();
         }
     }
