@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using wed410928343.ViewModels;
 
 namespace wed410928343.Controllers
 {
@@ -12,28 +13,16 @@ namespace wed410928343.Controllers
         // GET: User
         public ActionResult SigUp()
         {
-            return View();
+            return View(new SignUpData());
         }
         [HttpPost]
-        public ActionResult SigUp(string name,string account,string password)
+        public ActionResult SigUp(SignUpData data)
         {
-            if (name.IsNullOrWhiteSpace())
+            if (ModelState.IsValid)
             {
-                ViewBag.NameMessage = "請輸入名字";
+                data.Message = "註冊成功";
             }
-            if (account.IsNullOrWhiteSpace())
-            {
-                ViewBag.AccountMessage = "請輸入帳號";
-            }
-            if (password.IsNullOrWhiteSpace())
-            {
-                ViewBag.PasswordMessage = "請輸入密碼";
-            }
-            if ((!name.IsNullOrWhiteSpace()) && !account.IsNullOrWhiteSpace() && !password.IsNullOrWhiteSpace())
-            {
-                ViewBag.Message = "註冊成功";
-            }
-            return View();
+            return View(data);
         }
     }
 }
