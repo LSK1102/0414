@@ -46,7 +46,7 @@ namespace wed410928343.Controllers
         // 如需詳細資料，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,Name,Number,Email")] Student student)
+        public ActionResult Create([Bind(Include = "id,Username,Number,Email,IsActive")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace wed410928343.Controllers
         // 如需詳細資料，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,Name,Number,Email")] Student student)
+        public ActionResult Edit([Bind(Include = "id,Username,Number,Email,IsActive")] Student student)
         {
             if (ModelState.IsValid)
             {
